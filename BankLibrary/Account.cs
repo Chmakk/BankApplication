@@ -103,7 +103,7 @@ namespace BankLibrary
         protected internal virtual void Calculate()
         {
             decimal increment = Sum * Percentage / 100;
-            Sum = Sum + increment;
+            Sum += increment;
             OnCalculated(new AccountEventArgs($"Начислены проценты в размере: {increment}", increment));
         }
     }
